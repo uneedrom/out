@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShowOut | Event-агенство полного цикла </title>
+        <link rel="stylesheet" href="assets/css/popup.css">
+        <link rel="shortcut icon" href="assets/logo/favico.svg"
+            type="image/x-icon">
+    </head>
+    <body>
+        <div class="popup">
+            <h2>Авторизация</h2>
+            <form action="submit">
+                <input type="email" name="email" id="email"
+                    placeholder="Ваш email">
+                <input type="password" name="password" id="password"
+                    placeholder="Пароль">
+                <input type="submit" class="submit"
+                    value="Войти в аккаунт">
+            </form>
+            <p class="dop_info"><span onclick="showRegisterPopup()"
+                    style="text-decoration: underline; cursor: pointer;">Создать
+                    новый
+                    аккаунт</span></p>
+
+            <button class="close" onclick="hidePopup()">
+                ×
+            </button>
+        </div>
+    </body>
+</html>
