@@ -1153,6 +1153,15 @@ img.main_img {
 }
 
 @media(max-width:1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .banner_btn_types {
+        display: none;
+    }
+
     .header_btn {
         display: none;
     }
@@ -1188,6 +1197,12 @@ img.main_img {
 }
 
 @media(max-width:768px) {
+
+    .buttons_header {
+        align-items: center;
+        gap: 24px;
+    }
+
     header {
         padding: 15px 0;
     }
@@ -1279,6 +1294,36 @@ img.main_img {
     .gallery_grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .adv-card {
+        width: 100%;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .card-2 {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .reviews-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .reviews-content {
+        flex-direction: column;
+    }
+
+    .block {
+        padding: 0 20px;
+        gap: 24px;
+    }
+
+    .title-obj {
+        width: 100%;
+    }
 }
 
 @media(max-width:480px) {
@@ -1313,5 +1358,235 @@ img.main_img {
 
     .popup form input {
         padding: 12px;
+    }
+
+    .adv-content {
+        width: 100%;
+    }
+
+    .adv-card {
+        padding: 16px;
+    }
+
+    .card-content h4 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    .reviews-card {
+        padding: 16px;
+    }
+
+    .reviews-txt {
+        font-size: 11px;
+    }
+
+    .person-rev {
+        gap: 12px;
+    }
+
+    .per-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .name-per {
+        font-size: 12px;
+    }
+
+    .company-per {
+        font-size: 12px;
+    }
+
+    .reviews-date {
+        font-size: 12px;
+    }
+
+    .title-desc h2 {
+        font-size: 20px;
+    }
+}
+
+/* Добавляем стили для бургер-меню */
+#burger,
+[for=burger] {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    [for=burger] {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 999;
+        top: unset;
+        right: unset;
+    }
+
+    .burger_block {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .burger_block {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .tripl {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #DDFF00;
+        position: relative;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .tripl::before,
+    .tripl::after {
+        content: '';
+        border-radius: 4px;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #DDFF00;
+        transition: all 0.3s ease;
+    }
+
+    .tripl::before {
+        top: -8px;
+    }
+
+    .tripl::after {
+        bottom: -8px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(22, 22, 22, 0.95);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        padding: 80px 20px 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .menu li {
+        border-bottom: 1px solid #444;
+        padding: 16px 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+
+    #burger:checked~.menu {
+        left: 0;
+        display: block;
+    }
+
+    #burger:checked~[for=burger] .tripl::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #burger:checked~[for=burger] .tripl::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #burger:checked~[for=burger] .tripl {
+        background: transparent;
+    }
+}
+
+/* Обновляем стили для футера на мобильных устройствах */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content-1,
+    .content-2 {
+        width: 100%;
+    }
+
+    .content-2 {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .social-net {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .net {
+        width: calc(50% - 8px);
+    }
+
+    .foot {
+        align-items: center;
+        text-align: center;
+    }
+
+    .foot .logo {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .org {
+        text-align: center;
+    }
+
+    .menu-2 ul {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 24px 16px;
+        margin-top: 60px;
+    }
+
+    .net {
+        width: 100%;
+    }
+
+    .kp p {
+        font-size: 14px;
+    }
+
+    .mail,
+    .telef {
+        font-size: 12px;
+    }
+
+    .menu-2 ul {
+        font-size: 12px;
+    }
+
+    .privacy,
+    .project p {
+        font-size: 11px;
     }
 }
