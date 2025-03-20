@@ -1,4 +1,5 @@
 * {
+
     list-style: none;
     text-decoration: none;
     margin: 0;
@@ -417,6 +418,7 @@ button {
 
 /* Преимущества */
 .block {
+    overflow: hidden !important;
     display: flex;
     flex-direction: column;
     gap: 36px;
@@ -465,6 +467,7 @@ button {
     border: 1px solid #353535;
     width: 384px;
     transition: all 0.4s ease-in-out;
+    align-items: center;
 }
 
 .adv-card:hover {
@@ -482,6 +485,10 @@ button {
 .card-img {
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    display: block;
 }
 
 .adv-card h4 {
@@ -1154,6 +1161,10 @@ img.main_img {
 
 @media(max-width:1024px) {
 
+    .back-foot {
+        display: none;
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -1198,13 +1209,47 @@ img.main_img {
 
 @media(max-width:768px) {
 
+    .main_filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .main_filter select {
+        width: fit-content;
+    }
+
+
+    .banner {
+        width: 100%;
+        max-width: 1200px;
+        padding-top: 320px !important;
+        margin: 0 !important;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 36px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding: 0 !important;
+    }
+
+
+
+    .h1-main {
+        font-size: 48px;
+    }
+
     .buttons_header {
         align-items: center;
         gap: 24px;
     }
 
     header {
-        padding: 15px 0;
+        padding: 15px 16px;
     }
 
     .menu {
@@ -1212,7 +1257,8 @@ img.main_img {
     }
 
     .banner {
-        padding: 60px 0;
+        padding: 60px 16px;
+        overflow: hidden;
     }
 
     .banner-content {
@@ -1229,7 +1275,8 @@ img.main_img {
     }
 
     .services_filter {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 15px;
     }
 
@@ -1413,6 +1460,10 @@ img.main_img {
 /* Добавляем стили для бургер-меню */
 #burger,
 [for=burger] {
+    display: none;
+}
+
+.burger_block .menu {
     display: none;
 }
 
