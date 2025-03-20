@@ -487,8 +487,11 @@ button {
     transition: all 0.2s ease-in-out;
     width: 100%;
     height: auto;
-    max-width: 200px;
-    display: block;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .adv-card h4 {
@@ -1199,7 +1202,8 @@ img.main_img {
     }
 
     .reviews-content {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .footer .content-2 {
@@ -1208,6 +1212,18 @@ img.main_img {
 }
 
 @media(max-width:768px) {
+    .card-2 {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .block {
+        padding: 16px;
+    }
+
+    .banner.services {
+        padding: 0 !important;
+    }
 
     .main_filter {
         display: flex;
@@ -1293,7 +1309,7 @@ img.main_img {
     }
 
     .reviews-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .footer {
@@ -1326,50 +1342,116 @@ img.main_img {
 
     .services_pg_content {
         flex-direction: column;
-        gap: 30px;
+        gap: 32px;
+        padding: 24px 16px;
+    }
+
+    .main_info_serv {
+        width: 100%;
+    }
+
+    .serv_title h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .banner_btn_types {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .banner_type {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 
     .serv_characters {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 16px;
     }
 
-    .character_card.price {
-        grid-column: span 2;
+    .character_card {
+        padding: 16px;
+    }
+
+    .character_title {
+        font-size: 14px;
+    }
+
+    .character_sub,
+    .character_green_sub {
+        font-size: 16px;
+    }
+
+    .contacts_serv {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .contacts_serv h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .contacts_link {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .contact_btn_serv {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn_serv {
+        width: 100%;
+        text-align: center;
+    }
+
+    .serv_description {
+        padding: 24px 16px;
+    }
+
+    .serv_description h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .description_block {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .description_content {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .gallery .main_img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
     }
 
     .gallery_grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 16px;
     }
 
-    .adv-card {
+    .img_btn {
+        aspect-ratio: 1;
+    }
+
+    .img_btn img {
         width: 100%;
-        padding: 20px;
-        gap: 24px;
-    }
-
-    .card-2 {
-        width: 100%;
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .reviews-card {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .reviews-content {
-        flex-direction: column;
-    }
-
-    .block {
-        padding: 0 20px;
-        gap: 24px;
-    }
-
-    .title-obj {
-        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
     }
 }
 
@@ -1412,6 +1494,7 @@ img.main_img {
     }
 
     .adv-card {
+        width: 100%;
         padding: 16px;
     }
 
@@ -1465,9 +1548,15 @@ img.main_img {
 
 .burger_block .menu {
     display: none;
+    opacity: 0;
 }
 
 @media (max-width: 767px) {
+
+    .burger_block .menu {
+        display: block;
+    }
+
     [for=burger] {
         display: flex;
         align-items: center;
@@ -1551,6 +1640,7 @@ img.main_img {
     #burger:checked~.menu {
         left: 0;
         display: block;
+        opacity: 1;
     }
 
     #burger:checked~[for=burger] .tripl::before {
@@ -1570,6 +1660,29 @@ img.main_img {
 
 /* Обновляем стили для футера на мобильных устройствах */
 @media (max-width: 768px) {
+
+    .burger_block .header_btn {
+        display: block;
+    }
+
+    .banner.catalog {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 !important;
+    }
+
+    .info_ctg {
+        display: none;
+    }
+
+    .card-img {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .footer {
         flex-direction: column;
         gap: 24px;
@@ -1586,7 +1699,6 @@ img.main_img {
     }
 
     .social-net {
-        flex-wrap: wrap;
         justify-content: center;
     }
 
